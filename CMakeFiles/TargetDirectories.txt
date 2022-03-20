@@ -1,0 +1,3 @@
+C:/prog/secondTerm/ThirdLab/CMakeFiles/Test.dir
+C:/prog/secondTerm/ThirdLab/CMakeFiles/ALL_BUILD.dir
+C:/prog/secondTerm/ThirdLab/CMakeFiles/ZERO_CHECK.dir
