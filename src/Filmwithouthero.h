@@ -9,7 +9,7 @@ public:
 	TFilmwithouthero(TFilmwithouthero& woh);
 	TFilmwithouthero(int _longing, int _numofheroes);
 
-	virtual void Print();
+ void Print();
 
 	bool GetStoryTelling();
 	void SetStoryTelling(bool k);

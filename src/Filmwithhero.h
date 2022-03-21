@@ -9,7 +9,7 @@ public:
 	TFilmwithhero(TFilmwithhero& wh);
 	TFilmwithhero(int _longing, int _numofheroes);
 
-	virtual void Print();
+ void Print();
 
 	bool GetPresOfEnemy();
 	void SetPresOfEnenmy(bool f);

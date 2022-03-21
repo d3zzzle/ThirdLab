@@ -1,4 +1,5 @@
 #pragma once
+#include<string>
 
 class TFilms 
 {
@@ -8,22 +9,25 @@ public:
 	int GetLonging();
 	int GetNumOfHeroes();
 	int GetDataCount();
-	int* GetDatacin();
+	std::string GetName();
 
 	void SetLonging(int _longing);
 	void SetNumOfHeroes(int _numofheroes);
 	void SetDataCount(int _datacount);
-	void SetDatacin(int data, int i);
+	void SetName(std::string _name);
 
 	virtual void Print() = 0;
 
 	void cinema();
+
+	void PrintName();
+
 
 protected:
 	int longing;
 	int numofheroes;
 
 	int datacount;
-	int* datacin;
 
+	std::string name;
 };
