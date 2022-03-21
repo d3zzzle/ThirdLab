@@ -12,6 +12,8 @@ public:
 
 	void SetChannelName(std::string _channelname);
 
+	void PrintChannelName();
+
 
 protected:
 

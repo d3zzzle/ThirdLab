@@ -3,6 +3,7 @@
 
 TFilmwithouthero::TFilmwithouthero() : TFilms()
 {
+	numofheroes = 0;
 	storytelling = false;
 }
 
@@ -12,11 +13,6 @@ TFilmwithouthero::TFilmwithouthero(TFilmwithouthero& woh)
 	numofheroes = woh.numofheroes;
 	datacount = woh.datacount;
 	storytelling = woh.storytelling;
-	datacin = new int[datacount];
-		for (int i = 0; i < datacount; i++)
-		{
-			datacin[i] = woh.datacin[i];
-		}
 }
 
 TFilmwithouthero::TFilmwithouthero(int _longing, int _numofheroes) : TFilms()
@@ -28,8 +24,8 @@ TFilmwithouthero::TFilmwithouthero(int _longing, int _numofheroes) : TFilms()
 
 void TFilmwithouthero::Print()
 {
-	std::cout << "longing of film (woh) = \t" << this->GetLonging() << "datdcount (woh) = \t " << this->GetDataCount() <<
-		((storytelling == true) ? "Have one" : "Doesn't have") << std::endl;
+	std::cout << "  longing of film (woh) = \t  " << this->GetLonging() << "  datacount (woh) = \t   " << this->GetDataCount() <<
+		((storytelling == true) ? "  Have one (storytelling) " : "  Doesn't have (storytelling) ") << std::endl;
 }
 
 bool TFilmwithouthero::GetStoryTelling()

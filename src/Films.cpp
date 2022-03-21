@@ -1,15 +1,16 @@
 #include "Films.h"
+#include <string>
+#include<iostream>
+
+
+
 
 TFilms::TFilms()
 {
 	longing = 0;
-
 	numofheroes = 0;
-
 	datacount = 4;
-
-	datacin = new int[datacount];
-
+	name = "\0";
 }
 
 TFilms::~TFilms()
@@ -18,8 +19,7 @@ TFilms::~TFilms()
 
 	numofheroes = 0;
 
-	delete[] datacin;
-
+	datacount = 0;
 }
 
 int TFilms::GetLonging()
@@ -35,9 +35,10 @@ int TFilms::GetDataCount()
 	return datacount;
 }
 
-int* TFilms::GetDatacin()
+
+std::string TFilms::GetName()
 {
-	return datacin;
+	return name;
 }
 
 void TFilms::SetLonging(int _longing)
@@ -55,28 +56,22 @@ void TFilms::SetNumOfHeroes(int _numofheroes)
 void TFilms::SetDataCount(int _datacount)
 {
 	if (_datacount > 0)
-	{
-		int* tmp = new int[_datacount];
-		for (int i = 0; i < (datacount > _datacount ? _datacount : datacount); i++)
-		{
-			tmp[i] = datacin[i];
-		}
-		delete[] datacin;
-		datacin = tmp;
 		datacount = _datacount;
-	}
 }
 
-void TFilms::SetDatacin(int data, int i)
+
+void TFilms::SetName(std::string _name)
 {
-	if (i >= 0 && i < datacount)
-	{
-		this->datacin[i] = data;
-	}
+	name = _name;
 }
 
 void TFilms::cinema()
 {
 	longing += 10;
+}
+
+void TFilms::PrintName()
+{
+	std::cout << "name of the film - \t" << this->GetName() << std::endl;
 }
 
